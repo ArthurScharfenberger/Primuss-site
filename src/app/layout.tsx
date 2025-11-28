@@ -145,9 +145,9 @@ function SiteFooter() {
               Contato
             </h3>
             <p className="mt-2 text-slate-300">
-              Rua Exemplo, 123 – Canoas/RS
+              Rodovia BR 116 Nº 495, Esteio - RS
             </p>
-            <p className="mt-1 text-slate-300">+55 (51) 0000-0000</p>
+            <p className="mt-1 text-slate-300">+55 (51) 3454-2000</p>
             <p className="mt-1 text-slate-300">contato@primuss.com.br</p>
           </div>
 
@@ -177,17 +177,9 @@ function SiteFooter() {
             {/* Selo ISO */}
             <div className="flex items-center gap-2 rounded-2xl border border-slate-700 bg-slate-900 px-3 py-2">
               <div className="relative h-8 w-8">
-                <Image
-                  src="/iso-9001.png"
-                  alt="Certificação ISO 9001"
-                  fill
-                  className="object-contain"
-                />
+
               </div>
-              <div className="text-[11px] leading-snug">
-                <p className="font-semibold text-slate-100">ISO 9001</p>
-                <p className="text-slate-400">Gestão da qualidade certificada</p>
-              </div>
+
             </div>
 
             {/* QR Code WhatsApp */}
@@ -212,7 +204,7 @@ function SiteFooter() {
               © {new Date().getFullYear()} Primuss. Todos os direitos reservados.
             </span>
             <span className="text-slate-600">
-              Desenvolvido por Ayeeezx
+              Desenvolvido por Arthur Scharfenberger
             </span>
           </div>
         </div>

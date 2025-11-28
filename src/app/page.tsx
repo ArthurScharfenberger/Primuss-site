@@ -6,6 +6,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <CertificationsStrip />
       <StatsSection />
       <SolutionsSection />
       <SectorsSection />
@@ -15,6 +16,8 @@ export default function HomePage() {
     </>
   );
 }
+
+/* ===================== HERO ===================== */
 
 function HeroSection() {
   return (
@@ -68,7 +71,7 @@ function HeroSection() {
             <div className="flex items-center gap-2">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-400" />
               <span>
-                Certificação ISO 9001 e laboratório dimensional próprio
+                Certificação ISO 9001:2015 e laboratório dimensional próprio
               </span>
             </div>
           </div>
@@ -84,7 +87,7 @@ function HeroSection() {
                 alt="Vista do parque fabril da Primuss"
                 fill
                 // Zoom + posicionamento levemente pra direita e mais pra cima
-                className="object-cover scale-[2.8] object-[60%_160%]"
+                className="object-cover scale-[1.2] object-[45%_55%]"
                 priority
               />
 
@@ -105,7 +108,6 @@ function HeroSection() {
               </div>
             </div>
 
-
             {/* Badge flutuante com amarelo Primuss */}
             <div className="pointer-events-none absolute -top-6 right-4 rounded-full bg-[#FFE500] px-3 py-2 text-[11px] font-semibold text-[#111111] shadow-xl">
               Foco em qualidade e prazo de entrega
@@ -116,6 +118,76 @@ function HeroSection() {
     </section>
   );
 }
+
+/* ===================== FAIXA CERTIFICAÇÕES ===================== */
+
+function CertificationsStrip() {
+  return (
+    <section className="border-b border-slate-200 bg-white">
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:grid-cols-[1.1fr,1fr,1fr] md:items-center">
+        {/* TEXTO À ESQUERDA */}
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-500">
+            Credibilidade & sustentabilidade
+          </p>
+          <p className="mt-2 max-w-xs text-xs text-slate-500">
+            A Primuss mantém cadastros e certificações que reforçam sua
+            transparência financeira e o compromisso com o uso de energia de
+            fontes renováveis.
+          </p>
+        </div>
+
+        {/* CARD D-U-N-S */}
+        <Link
+          href="/duns.pdf"
+          target="_blank"
+          className="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300"
+        >
+          <div className="flex flex-col items-center gap-2 text-center">
+            <Image
+              src="/drsimage.avif"
+              alt="D-U-N-S Registered"
+              width={120}
+              height={80}
+              className="transition-transform duration-200 group-hover:scale-105"
+            />
+            <p className="text-[11px] font-semibold text-slate-700">
+              D-U-N-S® Registered
+            </p>
+            <p className="text-[11px] text-slate-500">
+              Empresa cadastrada na base global Dun &amp; Bradstreet.
+            </p>
+          </div>
+        </Link>
+
+        {/* CARD EMPRESA RENOVÁVEL */}
+        <Link
+          href="/energia.pdf"
+          target="_blank"
+          className="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300"
+        >
+          <div className="flex flex-col items-center gap-2 text-center">
+            <Image
+              src="/renovavel.avif"
+              alt="Empresa Renovável – Energia incentivada"
+              width={140}
+              height={80}
+              className="transition-transform duration-200 group-hover:scale-105"
+            />
+            <p className="text-[11px] font-semibold text-slate-700">
+              Empresa Renovável
+            </p>
+            <p className="text-[11px] text-slate-500">
+              Consumo de energia incentivada proveniente de fontes renováveis.
+            </p>
+          </div>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+/* ===================== NÚMEROS ===================== */
 
 function StatsSection() {
   const stats = [
@@ -184,6 +256,8 @@ function StatsSection() {
     </section>
   );
 }
+
+/* ===================== SOLUÇÕES ===================== */
 
 function SolutionsSection() {
   const solutions = [
@@ -273,7 +347,7 @@ function SolutionsSection() {
             href="/solucoes"
             className="text-xs font-semibold text-slate-100 underline-offset-4 hover:underline"
           >
-            Ver detalhes das capacidades de usinagem →
+            Ver detalhes das capacidades de usinagem →{" "}
           </Link>
         </div>
       </div>
@@ -281,6 +355,7 @@ function SolutionsSection() {
   );
 }
 
+/* ===================== SETORES ===================== */
 
 function SectorsSection() {
   const sectors = [
@@ -323,7 +398,7 @@ function SectorsSection() {
           <p className="mt-2 text-lg font-medium text-slate-900">
             Presença em diferentes segmentos da indústria.
           </p>
-          <p className="mt-2 text-xs text-slate-500 max-w-xl mx-auto">
+          <p className="mt-2 max-w-xl text-xs text-slate-500 mx-auto">
             A experiência da Primuss permite atender mercados com requisitos
             técnicos distintos, mantendo qualidade, confiabilidade e
             competitividade.
@@ -356,7 +431,7 @@ function SectorsSection() {
             href="/setores-atendidos"
             className="text-xs font-semibold text-slate-700 underline-offset-4 hover:underline"
           >
-            Ver mais detalhes dos segmentos →
+            Ver mais detalhes dos segmentos →{" "}
           </Link>
         </div>
       </div>
@@ -364,10 +439,14 @@ function SectorsSection() {
   );
 }
 
+/* ===================== QUALIDADE & SUSTENTABILIDADE ===================== */
+
 function QualitySustainabilitySection() {
   return (
     <section className="border-b border-slate-200 bg-slate-950 text-slate-50">
-      <div className="mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-[1.2fr,1fr] md:items-center">
+      {/* BLOCO PRINCIPAL */}
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1.2fr,1fr] md:items-center">
+        {/* TEXTO + CARDS */}
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
             Qualidade & sustentabilidade
@@ -375,15 +454,16 @@ function QualitySustainabilitySection() {
           <p className="mt-2 text-lg font-medium text-slate-50">
             Certificação, laboratório próprio e energia de fonte renovável.
           </p>
-          <p className="mt-3 text-xs text-slate-300 max-w-xl">
+          <p className="mt-3 max-w-xl text-xs text-slate-300">
             A Primuss mantém um sistema de gestão da qualidade robusto, com
-            certificação ISO, laboratório dimensional e cultura voltada à
-            melhoria contínua. Além disso, parte da energia consumida na
-            operação industrial é proveniente de fontes renováveis, reduzindo o
-            impacto ambiental.
+            certificação ISO 9001:2015, laboratório dimensional e cultura
+            voltada à melhoria contínua. Além disso, parte da energia consumida
+            na operação industrial é proveniente de fontes renováveis,
+            contribuindo para a redução de emissões de CO₂.
           </p>
 
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {/* CARD – QUALIDADE */}
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <div className="mb-3 flex items-center gap-2">
                 <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-800 text-emerald-400">
@@ -394,20 +474,23 @@ function QualitySustainabilitySection() {
                 </p>
               </div>
               <p className="text-sm font-medium text-slate-50">
-                ISO 9001 & laboratório dimensional
+                ISO 9001:2015 & laboratório dimensional
               </p>
               <p className="mt-2 text-[11px] text-slate-400">
                 Processos mapeados, inspeção em todas as etapas e uso de
                 equipamentos de medição de alto desempenho.
               </p>
               <Link
-                href="/qualidade"
-                className="mt-3 inline-block text-[11px] font-semibold text-slate-100 underline-offset-4 hover:underline"
+                // ideal renomear o arquivo para algo mais simples (ex.: /iso-9001-primuss.pdf)
+                href="/CQ%207709%20PRIMUSS%20IND%20METAL%20T%C3%89CNICA%20LTDA_Cliente.pdf"
+                target="_blank"
+                className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-[#FFE500] underline-offset-4 hover:underline"
               >
-                Ver detalhes da qualidade →
+                Ver certificado ISO 9001:2015
               </Link>
             </div>
 
+            {/* CARD – SUSTENTABILIDADE */}
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <div className="mb-3 flex items-center gap-2">
                 <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-800 text-sky-400">
@@ -422,21 +505,23 @@ function QualitySustainabilitySection() {
               </p>
               <p className="mt-2 text-[11px] text-slate-400">
                 Adoção de energia de fontes renováveis e iniciativas para
-                otimizar o uso de recursos naturais.
+                otimizar o uso de recursos naturais, alinhando produção e
+                sustentabilidade.
               </p>
               <Link
                 href="/sustentabilidade"
                 className="mt-3 inline-block text-[11px] font-semibold text-slate-100 underline-offset-4 hover:underline"
               >
-                Ver panorama sustentável →
+                Ver panorama sustentável →{" "}
               </Link>
             </div>
           </div>
         </div>
 
+        {/* COLUNA "COMO TRABALHAMOS" */}
         <div className="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/60 p-5 text-xs text-slate-200 shadow-xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">
-            COMO TRABALHAMOS
+            Como trabalhamos
           </p>
           <ul className="space-y-3">
             <li className="flex gap-3">
@@ -473,6 +558,8 @@ function QualitySustainabilitySection() {
   );
 }
 
+/* ===================== CLIENTES ===================== */
+
 function ClientsTeaser() {
   const tags = ["Automotivo", "Agronegócio", "Aeroespacial", "Defesa"];
 
@@ -487,7 +574,7 @@ function ClientsTeaser() {
             <p className="mt-2 text-lg font-medium text-slate-900">
               Confiança construída ao longo do tempo.
             </p>
-            <p className="mt-2 text-xs text-slate-500 max-w-md">
+            <p className="mt-2 max-w-md text-xs text-slate-500">
               A Primuss atende empresas de referência em seus segmentos, com
               relacionamento de longo prazo baseado em qualidade, prazo e
               suporte técnico.
@@ -512,13 +599,15 @@ function ClientsTeaser() {
             href="/clientes"
             className="text-xs font-semibold text-slate-700 underline-offset-4 hover:underline"
           >
-            Ver lista de clientes e cases →
+            Ver lista de clientes e cases →{" "}
           </Link>
         </div>
       </div>
     </section>
   );
 }
+
+/* ===================== CTA FINAL ===================== */
 
 function FinalCta() {
   return (
@@ -533,7 +622,7 @@ function FinalCta() {
               <p className="mt-2 text-lg font-medium text-slate-50">
                 Vamos falar sobre o seu projeto?
               </p>
-              <p className="mt-2 text-xs text-slate-300 max-w-md">
+              <p className="mt-2 max-w-md text-xs text-slate-300">
                 Envie seu desenho, especificação ou demanda de produção e nosso
                 time técnico vai avaliar a melhor solução em usinagem seriada ou
                 montagem de conjuntos para a sua aplicação.
@@ -558,9 +647,7 @@ function FinalCta() {
   );
 }
 
-/* --------------------------------------------------
-   ÍCONES SVG – usados ao longo da página
--------------------------------------------------- */
+/* ===================== ÍCONES SVG ===================== */
 
 function FactoryIcon() {
   return (
