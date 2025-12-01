@@ -87,25 +87,19 @@ function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 md:grid-cols-[1.3fr,1.1fr,1fr]">
         {/* SOBRE A PRIMUSS */}
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-0.3">
             <div className="relative h-10 w-40">
               <Image
                 src="/primuss-logo.png"
                 alt="Primuss"
                 fill
-                className="object-contain"
+                className="object-contain object object-left"
               />
             </div>
             <p className="text-[11px] uppercase tracking-[0.22em] text-slate-400">
-              Precisão em peças técnicas
+              Primuss - Precisão em peças técnicas
             </p>
           </div>
-
-          <p className="mt-4 max-w-xs text-xs text-slate-400">
-            Usinagem seriada e montagem de peças técnicas para setores como
-            automotivo, agronegócio, aeroespacial, segurança e defesa, com foco
-            em qualidade e estabilidade de fornecimento.
-          </p>
         </div>
 
         {/* SETORES ATENDIDOS – TÉCNICO */}

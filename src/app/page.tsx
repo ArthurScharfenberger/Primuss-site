@@ -7,7 +7,6 @@ export default function HomePage() {
     <>
       <HeroSection />
       <CertificationsStrip />
-      <StatsSection />
       <SolutionsSection />
       <SectorsSection />
       <QualitySustainabilitySection />
@@ -25,7 +24,6 @@ function HeroSection() {
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-20 lg:flex-row lg:items-center">
         {/* LADO ESQUERDO – TEXTO */}
         <div className="flex-1 space-y-6">
-          {/* Badge com amarelo Primuss */}
           <p className="inline-flex items-center rounded-full bg-[#FFE500] px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#111111] shadow">
             USINAGEM · PRECISÃO · QUALIDADE
           </p>
@@ -41,12 +39,11 @@ function HeroSection() {
               A Primuss atua na usinagem seriada e montagem de peças técnicas,
               atendendo setores como automotivo, agronegócio, aeroespacial,
               segurança e defesa, com estrutura própria e foco em qualidade
-              certificada.
+              certificada e estabilidade de fornecimento.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            {/* Botão principal amarelo */}
             <Link
               href="/contato"
               className="rounded-full bg-[#FFE500] px-5 py-2.5 text-sm font-semibold text-[#111111] shadow-md transition hover:bg-[#FFF48A]"
@@ -54,7 +51,6 @@ function HeroSection() {
               Falar com o time comercial
             </Link>
 
-            {/* Botão secundário escuro */}
             <Link
               href="/quem-somos"
               className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-slate-100 transition hover:bg-white/10"
@@ -66,13 +62,11 @@ function HeroSection() {
           <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-400">
             <div className="flex items-center gap-2">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              <span>Mais de 30 anos de experiência em usinagem</span>
+              <span>Experiência consolidada em usinagem seriada.</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-400" />
-              <span>
-                Certificação ISO 9001:2015 e laboratório dimensional próprio
-              </span>
+              <span>Certificação ISO 9001:2015 e laboratório dimensional.</span>
             </div>
           </div>
         </div>
@@ -80,22 +74,17 @@ function HeroSection() {
         {/* LADO DIREITO – CARD VISUAL */}
         <div className="flex-1">
           <div className="relative mx-auto max-w-md">
-            {/* CARD PRINCIPAL COM IMAGEM */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-2xl">
               <Image
                 src="/banner.png"
                 alt="Vista do parque fabril da Primuss"
                 fill
-                // Zoom + posicionamento levemente pra direita e mais pra cima
                 className="object-cover scale-[1.2] object-[45%_55%]"
                 priority
               />
-
-              {/* overlay leve */}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/5 to-transparent" />
             </div>
 
-            {/* CARD FLUTUANTE INFERIOR */}
             <div className="pointer-events-none absolute -bottom-6 left-4 flex items-center gap-3 rounded-2xl bg-slate-900/95 px-4 py-3 text-xs text-slate-100 shadow-xl backdrop-blur">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFE500] text-slate-900 shadow-sm">
                 <FactoryIcon />
@@ -108,7 +97,6 @@ function HeroSection() {
               </div>
             </div>
 
-            {/* Badge flutuante com amarelo Primuss */}
             <div className="pointer-events-none absolute -top-6 right-4 rounded-full bg-[#FFE500] px-3 py-2 text-[11px] font-semibold text-[#111111] shadow-xl">
               Foco em qualidade e prazo de entrega
             </div>
@@ -125,19 +113,16 @@ function CertificationsStrip() {
   return (
     <section className="border-b border-slate-200 bg-white">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:grid-cols-[1.1fr,1fr,1fr] md:items-center">
-        {/* TEXTO À ESQUERDA */}
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-500">
             Credibilidade & sustentabilidade
           </p>
           <p className="mt-2 max-w-xs text-xs text-slate-500">
-            A Primuss mantém cadastros e certificações que reforçam sua
-            transparência financeira e o compromisso com o uso de energia de
-            fontes renováveis.
+            Cadastros e certificações que reforçam a transparência financeira e
+            o compromisso da Primuss com o uso de energia de fontes renováveis.
           </p>
         </div>
 
-        {/* CARD D-U-N-S */}
         <Link
           href="/duns.pdf"
           target="_blank"
@@ -160,7 +145,6 @@ function CertificationsStrip() {
           </div>
         </Link>
 
-        {/* CARD EMPRESA RENOVÁVEL */}
         <Link
           href="/energia.pdf"
           target="_blank"
@@ -187,76 +171,6 @@ function CertificationsStrip() {
   );
 }
 
-/* ===================== NÚMEROS ===================== */
-
-function StatsSection() {
-  const stats = [
-    {
-      label: "Anos de atuação em usinagem",
-      value: "30+",
-      icon: <FactoryIcon />,
-    },
-    {
-      label: "Estrutura fabril",
-      value: "5.000 m²",
-      icon: <BuildingIcon />,
-    },
-    {
-      label: "Áreas de atuação",
-      value: "Auto, Agro, Aero, Defesa",
-      icon: <TargetIcon />,
-    },
-    {
-      label: "Foco",
-      value: "Qualidade & Prazo",
-      icon: <ShieldIcon />,
-    },
-  ];
-
-  return (
-    <section className="border-b border-slate-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-              A Primuss em números
-            </h2>
-            <p className="text-lg font-medium text-slate-900">
-              Estrutura industrial preparada para grandes desafios.
-            </p>
-          </div>
-          <p className="max-w-md text-xs text-slate-500">
-            Nossos números refletem a evolução contínua da empresa, combinando
-            experiência, capacidade produtiva e compromisso com os clientes.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-3xl border border-slate-100 bg-white px-5 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[#FFE500]/70 hover:shadow-md"
-            >
-              <div className="mb-4 flex items-center justify-between gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-50 text-slate-700">
-                  {stat.icon}
-                </div>
-                <span className="rounded-full bg-slate-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">
-                  Primuss
-                </span>
-              </div>
-              <p className="text-2xl font-semibold text-slate-900">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-xs text-slate-500">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ===================== SOLUÇÕES ===================== */
 
 function SolutionsSection() {
@@ -264,19 +178,19 @@ function SolutionsSection() {
     {
       title: "Usinagem CNC seriada",
       description:
-        "Processos estáveis e repetíveis para produção em alto volume, com foco em precisão dimensional e produtividade.",
+        "Processos estáveis para produção em alto volume, com foco em precisão dimensional, repetibilidade e produtividade.",
       icon: <CncIcon />,
     },
     {
       title: "Montagem de conjuntos e subconjuntos",
       description:
-        "Montagem de peças e componentes, com rastreabilidade, controle de torque e testes de funcionalidade.",
+        "Montagem de componentes, aplicação de torque controlado, testes funcionais e rastreabilidade de lote.",
       icon: <AssemblyIcon />,
     },
     {
       title: "Desenvolvimento de processo",
       description:
-        "Apoio técnico desde a análise de desenho até a definição de rota, ferramentas, dispositivos e parâmetros.",
+        "Apoio técnico desde a análise do desenho até definição de rota, dispositivos, ferramentas e parâmetros de corte.",
       icon: <ProcessIcon />,
     },
   ];
@@ -286,7 +200,7 @@ function SolutionsSection() {
       className="border-b border-slate-800 bg-slate-950 text-slate-50"
       id="solucoes"
     >
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
@@ -298,10 +212,9 @@ function SolutionsSection() {
             </p>
           </div>
           <p className="max-w-md text-xs text-slate-300">
-            Atuamos em toda a cadeia de usinagem seriada, oferecendo suporte
-            técnico, engenharia de processo, usinagem CNC e montagem de
-            conjuntos. Sempre com foco em estabilidade de fornecimento e
-            qualidade dimensional.
+            Atuamos em toda a cadeia de usinagem seriada, combinando engenharia
+            de processo, usinagem CNC e montagem de conjuntos para aplicações
+            com requisitos técnicos exigentes.
           </p>
         </div>
 
@@ -347,7 +260,7 @@ function SolutionsSection() {
             href="/solucoes"
             className="text-xs font-semibold text-slate-100 underline-offset-4 hover:underline"
           >
-            Ver detalhes das capacidades de usinagem →{" "}
+            Ver detalhes das capacidades de usinagem →
           </Link>
         </div>
       </div>
@@ -362,25 +275,25 @@ function SectorsSection() {
     {
       title: "Automotivo & motopeças",
       description:
-        "Componentes críticos com exigência de alto desempenho, segurança e rastreabilidade.",
+        "Componentes com alta exigência em desempenho, segurança, rastreabilidade e atendimento a normas internacionais.",
       icon: <GearIcon />,
     },
     {
       title: "Agronegócio",
       description:
-        "Peças para máquinas e implementos agrícolas, focando em robustez e durabilidade.",
+        "Peças para máquinas e implementos agrícolas, com foco em robustez, durabilidade e disponibilidade.",
       icon: <TractorIcon />,
     },
     {
       title: "Aeroespacial",
       description:
-        "Usinagem de peças com tolerâncias apertadas e rigoroso controle dimensional.",
+        "Usinagem de peças com tolerâncias apertadas, materiais especiais e rigoroso controle dimensional.",
       icon: <AeroIcon />,
     },
     {
       title: "Segurança & defesa",
       description:
-        "Componentes para aplicações táticas e de defesa, com foco em confiabilidade.",
+        "Componentes para aplicações táticas e de defesa, com confiabilidade e repetibilidade como premissas.",
       icon: <DefenseIcon />,
     },
   ];
@@ -390,7 +303,7 @@ function SectorsSection() {
       className="border-b border-slate-200 bg-white"
       id="setores-atendidos"
     >
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="mb-8 text-center">
           <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
             Setores atendidos
@@ -401,7 +314,7 @@ function SectorsSection() {
           <p className="mt-2 max-w-xl text-xs text-slate-500 mx-auto">
             A experiência da Primuss permite atender mercados com requisitos
             técnicos distintos, mantendo qualidade, confiabilidade e
-            competitividade.
+            competitividade no fornecimento de componentes.
           </p>
         </div>
 
@@ -431,7 +344,7 @@ function SectorsSection() {
             href="/setores-atendidos"
             className="text-xs font-semibold text-slate-700 underline-offset-4 hover:underline"
           >
-            Ver mais detalhes dos segmentos →{" "}
+            Ver mais detalhes dos segmentos →
           </Link>
         </div>
       </div>
@@ -444,114 +357,91 @@ function SectorsSection() {
 function QualitySustainabilitySection() {
   return (
     <section className="border-b border-slate-200 bg-slate-950 text-slate-50">
-      {/* BLOCO PRINCIPAL */}
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1.2fr,1fr] md:items-center">
-        {/* TEXTO + CARDS */}
-        <div>
+      <div className="mx-auto max-w-6xl px-4 py-14">
+        {/* CABEÇALHO CENTRALIZADO – RESUMO */}
+        <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
             Qualidade & sustentabilidade
           </h2>
-          <p className="mt-2 text-lg font-medium text-slate-50">
-            Certificação, laboratório próprio e energia de fonte renovável.
+          <p className="mt-3 text-2xl font-semibold text-slate-50">
+            Produção com controle, rastreabilidade e responsabilidade ambiental.
           </p>
-          <p className="mt-3 max-w-xl text-xs text-slate-300">
-            A Primuss mantém um sistema de gestão da qualidade robusto, com
-            certificação ISO 9001:2015, laboratório dimensional e cultura
-            voltada à melhoria contínua. Além disso, parte da energia consumida
-            na operação industrial é proveniente de fontes renováveis,
-            contribuindo para a redução de emissões de CO₂.
+          <p className="mt-3 text-xs text-slate-300 leading-relaxed">
+            Sistema de gestão da qualidade certificado ISO 9001:2015, apoio de
+            laboratório dimensional próprio e utilização de energia proveniente
+            de fontes renováveis compõem a base da operação industrial da
+            Primuss.
           </p>
-
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            {/* CARD – QUALIDADE */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-              <div className="mb-3 flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-800 text-emerald-400">
-                  <LabIcon />
-                </div>
-                <p className="text-xs font-semibold text-emerald-400">
-                  Gestão da qualidade
-                </p>
-              </div>
-              <p className="text-sm font-medium text-slate-50">
-                ISO 9001:2015 & laboratório dimensional
-              </p>
-              <p className="mt-2 text-[11px] text-slate-400">
-                Processos mapeados, inspeção em todas as etapas e uso de
-                equipamentos de medição de alto desempenho.
-              </p>
-              <Link
-                // ideal renomear o arquivo para algo mais simples (ex.: /iso-9001-primuss.pdf)
-                href="/iso-9001-primuss.pdf"
-                target="_blank"
-                className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-[#FFE500] underline-offset-4 hover:underline"
-              >
-                Ver certificado ISO 9001:2015
-              </Link>
-            </div>
-
-            {/* CARD – SUSTENTABILIDADE */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-              <div className="mb-3 flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-800 text-sky-400">
-                  <LeafIcon />
-                </div>
-                <p className="text-xs font-semibold text-sky-400">
-                  Responsabilidade ambiental
-                </p>
-              </div>
-              <p className="text-sm font-medium text-slate-50">
-                Energia incentivada & redução de CO₂
-              </p>
-              <p className="mt-2 text-[11px] text-slate-400">
-                Adoção de energia de fontes renováveis e iniciativas para
-                otimizar o uso de recursos naturais, alinhando produção e
-                sustentabilidade.
-              </p>
-              <Link
-                href="/sustentabilidade"
-                className="mt-3 inline-block text-[11px] font-semibold text-slate-100 underline-offset-4 hover:underline"
-              >
-                Ver panorama sustentável →{" "}
-              </Link>
-            </div>
-          </div>
         </div>
 
-        {/* COLUNA "COMO TRABALHAMOS" */}
-        <div className="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/60 p-5 text-xs text-slate-200 shadow-xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">
-            Como trabalhamos
-          </p>
-          <ul className="space-y-3">
-            <li className="flex gap-3">
-              <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-800 text-emerald-400">
-                <Dot />
-              </span>
-              <p>
-                Engenheiros e equipe técnica atuando junto ao cliente desde o
-                desenvolvimento, garantindo o melhor custo-benefício.
-              </p>
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-800 text-sky-400">
-                <Dot />
-              </span>
-              <p>
-                Processos padronizados, indicadores de performance e foco em
-                estabilidade de produção.
-              </p>
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-800 text-amber-400">
-                <Dot />
-              </span>
-              <p>
-                Cultura de segurança, organização e melhoria contínua no chão de
-                fábrica.
-              </p>
-            </li>
-          </ul>
+        {/* DOIS CARDS – VISÃO GERAL APENAS */}
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {/* QUALIDADE */}
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-[0_16px_40px_rgba(0,0,0,0.55)]">
+            <div className="mb-3 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-800 text-emerald-400">
+                <LabIcon />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                  Gestão da qualidade
+                </p>
+                <p className="text-[11px] text-slate-400">
+                  ISO 9001:2015 · Laboratório dimensional
+                </p>
+              </div>
+            </div>
+
+            <p className="text-sm font-medium text-slate-50">
+              Processos controlados e suporte metrológico em toda a cadeia de
+              produção.
+            </p>
+            <p className="mt-2 text-[11px] text-slate-400">
+              Estrutura preparada para garantir conformidade com requisitos de
+              desenho, rastreabilidade e repetibilidade em usinagem seriada.
+            </p>
+
+            <Link
+              href="/qualidade"
+              className="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold text-[#FFE500] underline-offset-4 hover:underline"
+            >
+              Ver detalhes do sistema de qualidade →
+            </Link>
+          </div>
+
+          {/* SUSTENTABILIDADE */}
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-[0_16px_40px_rgba(0,0,0,0.45)]">
+            <div className="mb-3 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-800 text-sky-400">
+                <LeafIcon />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">
+                  Responsabilidade ambiental
+                </p>
+                <p className="text-[11px] text-slate-400">
+                  Energia incentivada & redução de CO₂
+                </p>
+              </div>
+            </div>
+
+            <p className="text-sm font-medium text-slate-50">
+              Compromisso com o uso eficiente de recursos e matriz energética
+              mais limpa.
+            </p>
+            <p className="mt-2 text-[11px] text-slate-400">
+              Parte da energia consumida é proveniente de fontes renováveis, com
+              iniciativas contínuas de otimização de consumo e gestão de
+              resíduos.
+            </p>
+
+            <Link
+              href="/sustentabilidade"
+              className="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold text-slate-100 underline-offset-4 hover:underline"
+            >
+              Ver panorama sustentável →
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -561,45 +451,48 @@ function QualitySustainabilitySection() {
 /* ===================== CLIENTES ===================== */
 
 function ClientsTeaser() {
-  const tags = ["Automotivo", "Agronegócio", "Aeroespacial", "Defesa"];
-
   return (
     <section className="border-b border-slate-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-              Clientes & parcerias
-            </h2>
-            <p className="mt-2 text-lg font-medium text-slate-900">
-              Confiança construída ao longo do tempo.
-            </p>
-            <p className="mt-2 max-w-md text-xs text-slate-500">
-              A Primuss atende empresas de referência em seus segmentos, com
-              relacionamento de longo prazo baseado em qualidade, prazo e
-              suporte técnico.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1"
-              >
-                <Dot />
-                {tag}
-              </span>
-            ))}
-          </div>
+      <div className="mx-auto max-w-6xl px-4 py-20">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
+            Clientes & Parcerias
+          </h2>
+          <p className="mt-3 text-2xl font-semibold text-slate-900">
+            Confiança construída ao longo do tempo.
+          </p>
+          <p className="mt-3 text-xs text-slate-500 leading-relaxed">
+            A Primuss atende empresas de referência em seus setores, com
+            relacionamento técnico próximo, estabilidade de fornecimento e
+            excelência na entrega de componentes críticos.
+          </p>
         </div>
 
-        <div className="mt-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
+          {[
+            "Empresas líderes em seus segmentos industriais.",
+            "Projetos críticos com tolerâncias e requisitos rigorosos.",
+            "Parcerias de longo prazo com foco em qualidade e prazo.",
+            "Atendimento técnico próximo e engenharia colaborativa.",
+            "Processos auditáveis e documentação completa de produto.",
+            "Capacidade produtiva estável para demandas seriadas.",
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 shadow-sm hover:shadow-md transition"
+            >
+              <span className="mt-1 text-[#6344f5]">✔</span>
+              <p className="text-[12px] text-slate-700 leading-snug">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
           <Link
             href="/clientes"
             className="text-xs font-semibold text-slate-700 underline-offset-4 hover:underline"
           >
-            Ver lista de clientes e cases →{" "}
+            Ver lista de clientes e cases →
           </Link>
         </div>
       </div>
@@ -624,7 +517,7 @@ function FinalCta() {
               </p>
               <p className="mt-2 max-w-md text-xs text-slate-300">
                 Envie seu desenho, especificação ou demanda de produção e nosso
-                time técnico vai avaliar a melhor solução em usinagem seriada ou
+                time técnico irá avaliar a melhor solução em usinagem seriada ou
                 montagem de conjuntos para a sua aplicação.
               </p>
             </div>
@@ -637,7 +530,8 @@ function FinalCta() {
                 Falar com o time comercial
               </Link>
               <span className="text-[11px] text-slate-400">
-                Resposta em horário comercial · Atendimento técnico especializado
+                Resposta em horário comercial · Atendimento técnico
+                especializado
               </span>
             </div>
           </div>
