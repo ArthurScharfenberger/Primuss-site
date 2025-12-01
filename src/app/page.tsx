@@ -482,7 +482,7 @@ function QualitySustainabilitySection() {
               </p>
               <Link
                 // ideal renomear o arquivo para algo mais simples (ex.: /iso-9001-primuss.pdf)
-                href="/CQ%207709%20PRIMUSS%20IND%20METAL%20T%C3%89CNICA%20LTDA_Cliente.pdf"
+                href="/iso-9001-primuss.pdf"
                 target="_blank"
                 className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-[#FFE500] underline-offset-4 hover:underline"
               >

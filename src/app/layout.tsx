@@ -138,17 +138,35 @@ function SiteFooter() {
           </div>
         </div>
 
-        {/* CONTATO + ACESSO RÁPIDO */}
+        {/* CONTATO + ACESSO RÁPIDO + QR WHATSAPP */}
         <div className="space-y-4 text-xs">
           <div>
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
               Contato
             </h3>
-            <p className="mt-2 text-slate-300">
-              Rodovia BR 116 Nº 495, Esteio - RS
-            </p>
-            <p className="mt-1 text-slate-300">+55 (51) 3454-2000</p>
-            <p className="mt-1 text-slate-300">contato@primuss.com.br</p>
+
+            {/* Bloco com contato à esquerda e QR à direita */}
+            <div className="mt-2 flex flex-wrap items-center gap-3">
+              <div className="space-y-1 text-slate-300">
+                <p>Rodovia BR 116 Nº 495, Esteio - RS</p>
+                <p>+55 (51) 3454-2000</p>
+                <p>contato@primuss.com.br</p>
+              </div>
+
+              <div className="ml-auto flex items-center gap-2 rounded-2xl border border-slate-700 bg-slate-900 px-2 py-2">
+                <div className="relative h-10 w-10">
+                  <Image
+                    src="/qr-whatsapp.png"
+                    alt="WhatsApp comercial"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <span className="max-w-[140px] text-[10px] text-slate-400">
+                  Escaneie para falar com o time comercial
+                </span>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -169,44 +187,15 @@ function SiteFooter() {
         </div>
       </div>
 
-      {/* FAIXA TÉCNICA COM ISO + WHATSAPP + COPYRIGHT */}
+      {/* FAIXA INFERIOR – CENTRALIZADA */}
       <div className="border-t border-slate-800/70">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-[11px] text-slate-500 md:flex-row md:items-center md:justify-between">
-          {/* ISO + WHATSAPP */}
-          <div className="flex flex-wrap items-center gap-3">
-            {/* Selo ISO */}
-            <div className="flex items-center gap-2 rounded-2xl border border-slate-700 bg-slate-900 px-3 py-2">
-              <div className="relative h-8 w-8">
-
-              </div>
-
-            </div>
-
-            {/* QR Code WhatsApp */}
-            <div className="flex items-center gap-2 rounded-2xl border border-slate-700 bg-slate-900 px-2 py-2">
-              <div className="relative h-10 w-10">
-                <Image
-                  src="/qr-whatsapp.png"
-                  alt="WhatsApp comercial"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <span className="text-[10px] text-slate-400">
-                Escaneie para falar com o time comercial
-              </span>
-            </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="flex flex-col items-start gap-1 text-[11px] text-slate-500 md:items-end">
-            <span>
-              © {new Date().getFullYear()} Primuss. Todos os direitos reservados.
-            </span>
-            <span className="text-slate-600">
-              Desenvolvido por Arthur Scharfenberger
-            </span>
-          </div>
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-1 px-4 py-4 text-[11px] text-slate-500">
+          <span>
+            © {new Date().getFullYear()} Primuss. Todos os direitos reservados.
+          </span>
+          <span className="text-slate-600">
+            Desenvolvido por Arthur Scharfenberger
+          </span>
         </div>
       </div>
     </footer>
