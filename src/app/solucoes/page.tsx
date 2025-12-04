@@ -75,23 +75,22 @@ const MAQUINAS = [
 export default function SolucoesPage() {
   return (
     <div className="bg-slate-950 text-slate-50">
-      {/* HERO – PRODUÇÃO / EQUIPAMENTOS (LIMPO) */}
-      <section className="border-b border-slate-900 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900">
+      {/* HERO – PRODUÇÃO / EQUIPAMENTOS */}
+      <section className="border-b border-slate-900 bg-[radial-gradient(circle_at_top,_#020617,_#020617)]">
         <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-16 md:flex-row md:items-center">
           {/* BLOCO DE TEXTO */}
           <div className="max-w-xl">
-            {/* etiqueta topo */}
+            {/* etiqueta topo – mesmo mood da Qualidade */}
             <div className="inline-flex items-center gap-2 rounded-full bg-slate-900/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-300 ring-1 ring-slate-700/80">
               <span className="rounded-full bg-slate-800 px-2 py-0.5 text-[9px] tracking-[0.2em] text-[#FFE500]">
                 35 anos
               </span>
               <span className="hidden sm:inline">
-                Principais equipamentos de manufatura
+                Parque de produção & soluções
               </span>
               <span className="sm:hidden">Parque de produção</span>
             </div>
 
-            {/* título + subtítulo */}
             <h1 className="mt-5 text-3xl font-semibold tracking-tight text-slate-50 sm:text-[32px]">
               Usinagem CNC, montagem e ferramentaria para peças técnicas.
             </h1>
@@ -103,7 +102,7 @@ export default function SolucoesPage() {
               dimensional.
             </p>
 
-            {/* 3 métricas em cards enxutos */}
+            {/* métricas */}
             <div className="mt-6 grid gap-3 text-[11px] text-slate-300 sm:grid-cols-3">
               <MetricPill label="Estrutura" value="> 5.000 m² área construída" />
               <MetricPill label="Equipe" value="+160 profissionais" />
@@ -130,14 +129,14 @@ export default function SolucoesPage() {
             </div>
           </div>
 
-          {/* PAINEL – VISTA DA PRODUÇÃO (MAIS LIMPO) */}
+          {/* PAINEL – VISTA DA PRODUÇÃO */}
           <div className="relative flex-1">
             {/* brilho de fundo */}
             <div className="pointer-events-none absolute -inset-10 -z-10 blur-3xl">
               <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(250,250,210,0.08),transparent_60%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.22),transparent_60%)]" />
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/85 p-5 shadow-2xl shadow-slate-950/80 backdrop-blur-sm">
+            <div className="overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/85 p-5 shadow-[0_0_40px_rgba(15,23,42,0.9)] backdrop-blur-sm">
               {/* header compacto */}
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
@@ -160,123 +159,145 @@ export default function SolucoesPage() {
                 </div>
               </div>
 
-{/* display principal – versão mais espaçada */}
-<div className="mt-5 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 p-[1px]">
-  <div className="relative w-full overflow-hidden rounded-[14px] bg-slate-950 px-4 py-5 space-y-5">
-    {/* textura de fundo bem suave */}
-    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(148,163,184,0.16)_1px,transparent_1px)] bg-[length:18px_32px] opacity-25" />
-    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0%,rgba(251,191,36,0.12),transparent_55%),radial-gradient(circle_at_80%_100%,rgba(56,189,248,0.18),transparent_60%)]" />
+              {/* display principal – versão mais espaçada */}
+              <div className="mt-5 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 p-[1px]">
+                <div className="relative w-full overflow-hidden rounded-[14px] bg-slate-950 px-4 py-5 space-y-5">
+                  {/* textura de fundo bem suave */}
+                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(148,163,184,0.16)_1px,transparent_1px)] bg-[length:18px_32px] opacity-25" />
+                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0%,rgba(251,191,36,0.12),transparent_55%),radial-gradient(circle_at_80%_100%,rgba(56,189,248,0.18),transparent_60%)]" />
 
-    <div className="relative space-y-5 text-[10px]">
-      {/* título interno */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="font-semibold text-slate-100">
-          Principais equipamentos disponíveis para manufatura
-        </p>
-        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-1 text-[9px] font-semibold text-emerald-300">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-          Produção ativa
-        </span>
-      </div>
+                  <div className="relative space-y-5 text-[10px]">
+                    {/* título interno */}
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <p className="font-semibold text-slate-100">
+                        Principais equipamentos disponíveis para manufatura
+                      </p>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-1 text-[9px] font-semibold text-emerald-300">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                        Produção ativa
+                      </span>
+                    </div>
 
-      {/* três blocos com mais respiro */}
-      <div className="grid gap-4 text-[10px] text-slate-200 sm:grid-cols-3">
-        <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
-          <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-            Centros de usinagem
-          </p>
-          <p className="font-medium leading-relaxed">
-            Verticais e horizontais · CNC 3 eixos para programas seriados.
-          </p>
-        </div>
+                    {/* três blocos com mais respiro */}
+                    <div className="grid gap-4 text-[10px] text-slate-200 sm:grid-cols-3">
+                      <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
+                        <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                          Centros de usinagem
+                        </p>
+                        <p className="font-medium leading-relaxed">
+                          Verticais e horizontais · CNC 3 eixos para programas
+                          seriados.
+                        </p>
+                      </div>
 
-        <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
-          <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-            Tornos CNC
-          </p>
-          <p className="font-medium leading-relaxed">
-            Cabeçote fixo e móvel · linha seriada com set-up padronizado.
-          </p>
-        </div>
+                      <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
+                        <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                          Tornos CNC
+                        </p>
+                        <p className="font-medium leading-relaxed">
+                          Cabeçote fixo e móvel · linha seriada com set-up
+                          padronizado.
+                        </p>
+                      </div>
 
-        <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
-          <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-            Eletroerosão
-          </p>
-          <p className="font-medium leading-relaxed">
-            Fio e penetração · ferramentaria própria para dispositivos e
-            ferramentas especiais.
-          </p>
-        </div>
-      </div>
+                      <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
+                        <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                          Eletroerosão
+                        </p>
+                        <p className="font-medium leading-relaxed">
+                          Fio e penetração · ferramentaria própria para
+                          dispositivos e ferramentas especiais.
+                        </p>
+                      </div>
+                    </div>
 
-      {/* célula destacada, separada com linha */}
-      <div className="space-y-2 border-t border-slate-800/70 pt-3">
-        <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400">
-          Célula destacada
-        </p>
-        <div className="h-1.5 overflow-hidden rounded-full bg-slate-800">
-          <div className="h-full w-[82%] bg-sky-400" aria-hidden="true" />
-        </div>
-        <p className="text-[9px] text-slate-300">
-          Centro de torneamento 2600Y · célula dedicada para peças críticas com
-          controle dimensional reforçado.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+                    {/* célula destacada, separada com linha */}
+                    <div className="space-y-2 border-t border-slate-800/70 pt-3">
+                      <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400">
+                        Célula destacada
+                      </p>
+                      <div className="h-1.5 overflow-hidden rounded-full bg-slate-800">
+                        <div
+                          className="h-full w-[82%] bg-sky-400"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <p className="text-[9px] text-slate-300">
+                        Centro de torneamento 2600Y · célula dedicada para peças
+                        críticas com controle dimensional reforçado.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-{/* rodapé do painel – três bullets simples */}
-<div className="mt-6 grid gap-4 text-[10px] text-slate-300 sm:grid-cols-3">
-  <div>
-    <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-      Programas
-    </p>
-    <p className="mt-1 leading-relaxed">
-      Médio e alto volume, contratos de longo prazo, ramp-up faseado.
-    </p>
-  </div>
-  <div>
-    <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-      Materiais
-    </p>
-    <p className="mt-1 leading-relaxed">
-      Aços carbono e ligados, inox, alumínio e ligas especiais conforme normas
-      e especificações do cliente.
-    </p>
-  </div>
-  <div>
-    <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-      Engenharia
-    </p>
-    <p className="mt-1 leading-relaxed">
-      Projeto de dispositivos, definição de rota de processo e apoio ao plano
-      de controle.
-    </p>
-  </div>
-</div>
-
+              {/* rodapé do painel – três bullets simples */}
+              <div className="mt-6 grid gap-4 text-[10px] text-slate-300 sm:grid-cols-3">
+                <div>
+                  <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                    Programas
+                  </p>
+                  <p className="mt-1 leading-relaxed">
+                    Médio e alto volume, contratos de longo prazo, ramp-up
+                    faseado.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                    Materiais
+                  </p>
+                  <p className="mt-1 leading-relaxed">
+                    Aços carbono e ligados, inox, alumínio e ligas especiais
+                    conforme normas e especificações do cliente.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                    Engenharia
+                  </p>
+                  <p className="mt-1 leading-relaxed">
+                    Projeto de dispositivos, definição de rota de processo e
+                    apoio ao plano de controle.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CARROSSEL ANIMADO – 12 EQUIPAMENTOS */}
-      <section className="bg-white border-y-4 border-[#FFE500] py-10">
-        <div className="mx-auto max-w-6xl px-4">
-          <EquipamentosCarousel maquinas={MAQUINAS} />
-        </div>
-      </section>
-
-      {/* SOLUÇÕES INTEGRADAS */}
+      {/* CARROSSEL ANIMADO – 12 EQUIPAMENTOS (DARK, ESTILO QUALIDADE) */}
       <section className="border-b border-slate-900 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
+                Parque de máquinas
+              </p>
+              <p className="mt-2 text-lg font-medium text-slate-50">
+                Principais equipamentos disponíveis para produção seriada.
+              </p>
+            </div>
+            <p className="max-w-md text-xs text-slate-400">
+              Centros de usinagem, tornos CNC, células dedicadas e recursos de
+              ferramentaria que suportam programas contínuos de fornecimento.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-slate-800 bg-slate-900/80 px-4 py-6 shadow-[0_0_40px_rgba(15,23,42,0.9)]">
+            <EquipamentosCarousel maquinas={MAQUINAS} />
+          </div>
+        </div>
+      </section>
+
+      {/* SOLUÇÕES INTEGRADAS – MESMO MOOD DARK */}
+      <section className="border-b border-slate-900 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12">
+          <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
                 Soluções integradas
-              </h2>
+              </p>
               <p className="mt-2 text-lg font-medium text-slate-50">
                 Do equipamento à solução final para o cliente.
               </p>
@@ -319,8 +340,8 @@ export default function SolucoesPage() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section className="bg-slate-950">
+      {/* CTA FINAL – alinhado com estilo da Qualidade */}
+      <section className="border-t border-slate-900 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="rounded-3xl border border-slate-800 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 px-6 py-8 shadow-2xl shadow-slate-950/80 md:flex md:items-center md:justify-between">
             <div>
@@ -357,7 +378,7 @@ export default function SolucoesPage() {
   );
 }
 
-/* ========= COMPONENTES AUXILIARES (MESMOS DE ANTES) ========= */
+/* ========= COMPONENTES AUXILIARES ========= */
 
 function LedDot({ label }: { label: string }) {
   return (
