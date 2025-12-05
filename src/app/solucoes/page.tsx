@@ -75,35 +75,46 @@ const MAQUINAS = [
 export default function SolucoesPage() {
   return (
     <div className="bg-slate-950 text-slate-50">
-      {/* HERO – PRODUÇÃO / EQUIPAMENTOS */}
-      <section className="border-b border-slate-900 bg-[radial-gradient(circle_at_top,_#020617,_#020617)]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-16 md:flex-row md:items-center">
-          {/* BLOCO DE TEXTO */}
-          <div className="max-w-xl">
-            {/* etiqueta topo – mesmo mood da Qualidade */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-900/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-300 ring-1 ring-slate-700/80">
-              <span className="rounded-full bg-slate-800 px-2 py-0.5 text-[9px] tracking-[0.2em] text-[#FFE500]">
-                35 anos
-              </span>
-              <span className="hidden sm:inline">
-                Parque de produção & soluções
-              </span>
-              <span className="sm:hidden">Parque de produção</span>
-            </div>
+      {/* HERO – alinhado com o estilo de Setores */}
+      <section className="relative overflow-hidden border-b border-slate-800 bg-[radial-gradient(circle_at_top,_#1e293b,_#020617)]">
+        {/* textura/luzezinhas de fundo, igual vibe dos Setores */}
+        <div className="pointer-events-none absolute inset-0 opacity-40 mix-blend-screen">
+          <div className="h-full w-full bg-[radial-gradient(circle_at_10%_0%,rgba(250,250,250,0.12),transparent_55%),radial-gradient(circle_at_90%_0%,rgba(250,250,250,0.08),transparent_55%)]" />
+        </div>
 
-            <h1 className="mt-5 text-3xl font-semibold tracking-tight text-slate-50 sm:text-[32px]">
-              Usinagem CNC, montagem e ferramentaria para peças técnicas.
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-16 lg:flex-row lg:items-center lg:py-24">
+          {/* BLOCO DE TEXTO – tipografia e espaçamentos no padrão Setores */}
+          <div className="flex-1 space-y-6">
+            <p className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 bg-yellow-400/10 px-3 py-1 text-xs font-medium tracking-wide text-yellow-300">
+              Usinagem seriada · Montagem · Ferramentaria
+            </p>
+
+            <h1 className="text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
+              Soluções em produção &amp; usinagem CNC
             </h1>
 
-            <p className="mt-4 text-sm leading-relaxed text-slate-300">
+            <p className="max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
               Estrutura preparada para programas de fornecimento contínuo:
               centros de usinagem, tornos CNC, células dedicadas e
               ferramentaria própria para dispositivos de fixação e controle
               dimensional.
             </p>
 
-            {/* métricas */}
-            <div className="mt-6 grid gap-3 text-[11px] text-slate-300 sm:grid-cols-3">
+            {/* chips igual mood dos Setores */}
+            <div className="flex flex-wrap gap-3 text-sm text-slate-300">
+              <span className="rounded-full border border-slate-700 px-3 py-1">
+                Produção seriada &amp; contratos de longo prazo
+              </span>
+              <span className="rounded-full border border-slate-700 px-3 py-1">
+                Montagem de conjuntos &amp; subconjuntos
+              </span>
+              <span className="rounded-full border border-slate-700 px-3 py-1">
+                Ferramentaria &amp; engenharia de processo
+              </span>
+            </div>
+
+            {/* métricas – adaptadas ao visual da outra página */}
+            <div className="grid gap-4 text-xs text-slate-300 sm:grid-cols-3">
               <MetricPill label="Estrutura" value="> 5.000 m² área construída" />
               <MetricPill label="Equipe" value="+160 profissionais" />
               <MetricPill
@@ -112,153 +123,84 @@ export default function SolucoesPage() {
               />
             </div>
 
-            {/* CTAs */}
-            <div className="mt-8 flex flex-wrap gap-3 text-xs">
+            {/* CTAs – mesma linha visual dos botões de Setores */}
+            <div className="flex flex-wrap gap-3 text-sm">
               <Link
                 href="/contato"
-                className="inline-flex items-center justify-center rounded-full bg-[#FFE500] px-4 py-2 font-semibold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:-translate-y-0.5 hover:shadow-yellow-400/40"
+                className="inline-flex items-center justify-center rounded-full border border-yellow-400/70 bg-yellow-400 px-6 py-2.5 text-sm font-medium text-slate-950 shadow-md transition hover:border-yellow-300 hover:bg-yellow-300"
               >
-                Solicitar estudo de viabilidade →
+                Solicitar estudo de viabilidade
               </Link>
               <Link
                 href="/clientes"
-                className="inline-flex items-center justify-center rounded-full border border-slate-700/80 bg-slate-900/60 px-4 py-2 font-semibold text-slate-100 underline-offset-4 transition hover:-translate-y-0.5 hover:border-slate-500 hover:bg-slate-900"
+                className="inline-flex items-center text-sm font-medium text-yellow-300 underline-offset-2 hover:underline"
               >
-                Ver clientes & aplicações
+                Ver clientes &amp; aplicações
               </Link>
             </div>
           </div>
 
-          {/* PAINEL – VISTA DA PRODUÇÃO */}
-          <div className="relative flex-1">
-            {/* brilho de fundo */}
-            <div className="pointer-events-none absolute -inset-10 -z-10 blur-3xl">
-              <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(250,250,210,0.08),transparent_60%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.22),transparent_60%)]" />
-            </div>
-
-            <div className="overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/85 p-5 shadow-[0_0_40px_rgba(15,23,42,0.9)] backdrop-blur-sm">
-              {/* header compacto */}
-              <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-2xl bg-slate-800 text-sky-400">
-                    <SparkIcon />
-                  </span>
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-400">
-                      Vista da produção
-                    </p>
-                    <p className="mt-0.5 text-[11px] text-slate-200">
-                      Células CNC · montagem · logística interna
-                    </p>
-                  </div>
-                </div>
-                <div className="hidden gap-2 text-[9px] text-slate-300 sm:flex">
-                  <LedDot label="CNC" />
-                  <LedDot label="Montagem" />
-                  <LedDot label="Ferramentaria" />
-                </div>
+          {/* PAINEL – “dashboard” espelhando o card da direita dos Setores */}
+          <div className="flex-1">
+            <div className="relative rounded-3xl border border-slate-800 bg-slate-900/40 p-6 shadow-[0_0_0_1px_rgba(15,23,42,0.9)] backdrop-blur">
+              <div className="mb-4 flex items-center justify-between text-xs text-slate-400">
+                <span>Visão da produção</span>
+                <span>Parque de máquinas &amp; células</span>
               </div>
 
-              {/* display principal – versão mais espaçada */}
-              <div className="mt-5 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 p-[1px]">
-                <div className="relative w-full overflow-hidden rounded-[14px] bg-slate-950 px-4 py-5 space-y-5">
-                  {/* textura de fundo bem suave */}
-                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(148,163,184,0.16)_1px,transparent_1px)] bg-[length:18px_32px] opacity-25" />
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0%,rgba(251,191,36,0.12),transparent_55%),radial-gradient(circle_at_80%_100%,rgba(56,189,248,0.18),transparent_60%)]" />
+              <div className="space-y-4 text-xs text-slate-300">
+                {/* mini “linha de status” */}
+                <div className="flex flex-wrap items-center gap-2">
+                  <StatusDot label="Centros de usinagem" />
+                  <StatusDot label="Tornos CNC" />
+                  <StatusDot label="Eletroerosão &amp; ferramentaria" />
+                </div>
 
-                  <div className="relative space-y-5 text-[10px]">
-                    {/* título interno */}
-                    <div className="flex flex-wrap items-center justify-between gap-3">
-                      <p className="font-semibold text-slate-100">
-                        Principais equipamentos disponíveis para manufatura
-                      </p>
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-1 text-[9px] font-semibold text-emerald-300">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                        Produção ativa
-                      </span>
-                    </div>
-
-                    {/* três blocos com mais respiro */}
-                    <div className="grid gap-4 text-[10px] text-slate-200 sm:grid-cols-3">
-                      <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
-                        <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                          Centros de usinagem
-                        </p>
-                        <p className="font-medium leading-relaxed">
-                          Verticais e horizontais · CNC 3 eixos para programas
-                          seriados.
-                        </p>
-                      </div>
-
-                      <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
-                        <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                          Tornos CNC
-                        </p>
-                        <p className="font-medium leading-relaxed">
-                          Cabeçote fixo e móvel · linha seriada com set-up
-                          padronizado.
-                        </p>
-                      </div>
-
-                      <div className="rounded-2xl border border-slate-800/70 bg-slate-900/70 px-3 py-3 space-y-1">
-                        <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                          Eletroerosão
-                        </p>
-                        <p className="font-medium leading-relaxed">
-                          Fio e penetração · ferramentaria própria para
-                          dispositivos e ferramentas especiais.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* célula destacada, separada com linha */}
-                    <div className="space-y-2 border-t border-slate-800/70 pt-3">
-                      <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400">
-                        Célula destacada
-                      </p>
-                      <div className="h-1.5 overflow-hidden rounded-full bg-slate-800">
-                        <div
-                          className="h-full w-[82%] bg-sky-400"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <p className="text-[9px] text-slate-300">
-                        Centro de torneamento 2600Y · célula dedicada para peças
-                        críticas com controle dimensional reforçado.
-                      </p>
-                    </div>
+                {/* bloco 1 – equipamentos */}
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
+                    <p className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                      Equipamentos
+                    </p>
+                    <p className="mt-2 text-sm font-medium text-slate-50">
+                      12 principais máquinas CNC
+                    </p>
+                    <p className="mt-1 text-[11px] text-slate-300">
+                      Centros verticais e horizontais, tornos CNC cabeçote
+                      móvel/fixo e eletroerosão.
+                    </p>
                   </div>
-                </div>
-              </div>
 
-              {/* rodapé do painel – três bullets simples */}
-              <div className="mt-6 grid gap-4 text-[10px] text-slate-300 sm:grid-cols-3">
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                    Programas
-                  </p>
-                  <p className="mt-1 leading-relaxed">
-                    Médio e alto volume, contratos de longo prazo, ramp-up
-                    faseado.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                    Materiais
-                  </p>
-                  <p className="mt-1 leading-relaxed">
-                    Aços carbono e ligados, inox, alumínio e ligas especiais
-                    conforme normas e especificações do cliente.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                    Engenharia
-                  </p>
-                  <p className="mt-1 leading-relaxed">
-                    Projeto de dispositivos, definição de rota de processo e
-                    apoio ao plano de controle.
-                  </p>
+                  <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
+                    <p className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                      Programas
+                    </p>
+                    <p className="mt-2 text-sm font-medium text-slate-50">
+                      Médio e alto volume
+                    </p>
+                    <p className="mt-1 text-[11px] text-slate-300">
+                      Foco em contratos de longo prazo, ramp-up faseado e
+                      estabilidade de fornecimento.
+                    </p>
+                  </div>
+
+                  {/* bloco de destaque – semelhante ao card amarelo dos Setores */}
+                  <div className="col-span-2 rounded-2xl border border-yellow-400/30 bg-yellow-400/5 p-4 text-[11px] text-slate-100">
+                    <p className="font-medium text-yellow-300">
+                      Células dedicadas e controle dimensional reforçado
+                    </p>
+                    <p className="mt-1 text-slate-200">
+                      A Primuss estrutura células específicas para peças
+                      críticas, combinando usinagem CNC, montagem e
+                      ferramentaria própria para garantir repetibilidade e
+                      rastreabilidade.
+                    </p>
+                    <p className="mt-2 text-slate-300">
+                      Centro de torneamento 2600Y · células de usinagem
+                      vertical/horizontal · eletroerosão para ferramentas
+                      especiais.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -266,112 +208,94 @@ export default function SolucoesPage() {
         </div>
       </section>
 
-      {/* CARROSSEL ANIMADO – 12 EQUIPAMENTOS (DARK, ESTILO QUALIDADE) */}
-      <section className="border-b border-slate-900 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
-                Parque de máquinas
-              </p>
-              <p className="mt-2 text-lg font-medium text-slate-50">
-                Principais equipamentos disponíveis para produção seriada.
-              </p>
-            </div>
-            <p className="max-w-md text-xs text-slate-400">
+      {/* CARROSSEL – mesmo tipo de container dos cards de Setores */}
+      <section className="mx-auto max-w-6xl px-6 py-16 lg:py-20 border-b border-slate-800">
+        <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-slate-50 sm:text-2xl">
+              Parque de máquinas &amp; capacidade instalada
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-slate-300">
               Centros de usinagem, tornos CNC, células dedicadas e recursos de
               ferramentaria que suportam programas contínuos de fornecimento.
             </p>
           </div>
+          <p className="max-w-sm text-xs text-slate-400">
+            Abaixo, alguns dos principais equipamentos disponíveis para produção
+            seriada. Imagens ilustrativas do parque instalado.
+          </p>
+        </div>
 
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/80 px-4 py-6 shadow-[0_0_40px_rgba(15,23,42,0.9)]">
-            <EquipamentosCarousel maquinas={MAQUINAS} />
-          </div>
+        <div className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/60 p-4 shadow-[0_0_40px_rgba(15,23,42,0.6)]">
+          <EquipamentosCarousel maquinas={MAQUINAS} />
         </div>
       </section>
 
-      {/* SOLUÇÕES INTEGRADAS – MESMO MOOD DARK */}
-      <section className="border-b border-slate-900 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
-                Soluções integradas
-              </p>
-              <p className="mt-2 text-lg font-medium text-slate-50">
-                Do equipamento à solução final para o cliente.
-              </p>
-            </div>
-            <p className="max-w-md text-xs text-slate-400">
-              Componentes usinados, conjuntos montados e desenvolvimento
-              conjunto de rota de processo com a engenharia do cliente.
+      {/* SOLUÇÕES INTEGRADAS – adaptado pro mesmo mood da grid de Setores */}
+      <section className="mx-auto max-w-6xl px-6 py-16 lg:py-20 border-b border-slate-800">
+        <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-slate-50 sm:text-2xl">
+              Da peça usinada ao conjunto final
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-slate-300">
+              A Primuss combina usinagem CNC, montagem e engenharia para
+              entregar componentes, subconjuntos e soluções completas em linha
+              com os requisitos do cliente.
             </p>
           </div>
+        </div>
 
-          <div className="grid gap-5 text-xs text-slate-200 md:grid-cols-3">
-            <SolutionCard
-              title="Componentes usinados em série"
-              icon="part"
-              bullets={[
-                "Peças em aço, inox, alumínio e ligas especiais.",
-                "Rotas CNC ajustadas para volume e estabilidade.",
-                "Tolerâncias compatíveis com aplicações críticas.",
-              ]}
-            />
-            <SolutionCard
-              title="Conjuntos & subconjuntos montados"
-              icon="assembly"
-              bullets={[
-                "Montagem de conjuntos mecânicos e roscados.",
-                "Torques controlados e dispositivos dedicados.",
-                "Identificação e embalagem técnica por programa.",
-              ]}
-            />
-            <SolutionCard
-              title="Engenharia & desenvolvimento conjunto"
-              icon="engineering"
-              bullets={[
-                "Definição de rota de processo com o cliente.",
-                "Análise de fabricabilidade e custo.",
-                "Prototipagem e pré-série já alinhadas à produção.",
-              ]}
-            />
-          </div>
+        <div className="grid gap-6 md:grid-cols-3 text-xs text-slate-200">
+          <SolutionCard
+            title="Componentes usinados em série"
+            icon="part"
+            bullets={[
+              "Peças em aço, inox, alumínio e ligas especiais.",
+              "Rotas CNC ajustadas para volume e estabilidade.",
+              "Tolerâncias compatíveis com aplicações críticas.",
+            ]}
+          />
+          <SolutionCard
+            title="Conjuntos & subconjuntos montados"
+            icon="assembly"
+            bullets={[
+              "Montagem de conjuntos mecânicos e roscados.",
+              "Torques controlados e dispositivos dedicados.",
+              "Identificação e embalagem técnica por programa.",
+            ]}
+          />
+          <SolutionCard
+            title="Engenharia & desenvolvimento conjunto"
+            icon="engineering"
+            bullets={[
+              "Definição de rota de processo com o cliente.",
+              "Análise de fabricabilidade e custo.",
+              "Prototipagem e pré-série já alinhadas à produção.",
+            ]}
+          />
         </div>
       </section>
 
-      {/* CTA FINAL – alinhado com estilo da Qualidade */}
-      <section className="border-t border-slate-900 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="rounded-3xl border border-slate-800 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 px-6 py-8 shadow-2xl shadow-slate-950/80 md:flex md:items-center md:justify-between">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
-                Próximo passo
-              </p>
-              <p className="mt-2 text-lg font-medium text-slate-50">
-                Conecte a sua demanda ao nosso parque de produção.
-              </p>
-              <p className="mt-2 max-w-xl text-xs text-slate-300">
-                Envie desenhos, volumes, materiais e cronograma desejado. A
-                equipe técnica da Primuss avalia a melhor configuração de
-                processo e modelo de fornecimento.
-              </p>
-            </div>
-            <div className="mt-5 flex flex-col gap-3 text-xs md:mt-0 md:text-right">
-              <Link
-                href="/contato"
-                className="inline-flex items-center justify-center rounded-full bg-[#FFE500] px-4 py-2 font-semibold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:-translate-y-0.5 hover:shadow-yellow-400/50"
-              >
-                Falar com a engenharia →
-              </Link>
-              <Link
-                href="/clientes"
-                className="text-[11px] font-semibold text-slate-200 underline-offset-4 hover:underline"
-              >
-                Ver clientes atendidos
-              </Link>
-            </div>
+      {/* CTA FINAL – mesmo estilo visual do CTA da página de Setores */}
+      <section className="border-t border-slate-800 bg-slate-900/40">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
+              Tem um componente ou célula em mente?
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-slate-300">
+              Envie o desenho técnico, volume estimado, materiais e requisitos
+              principais. Nossa equipe avalia a viabilidade, estrutura a rota
+              de processo e sugere o melhor modelo de fornecimento.
+            </p>
           </div>
+          <Link
+            href="/contato"
+            className="inline-flex items-center justify-center rounded-full border border-yellow-400/70 bg-yellow-400 px-6 py-2.5 text-sm font-medium text-slate-950 shadow-md transition hover:border-yellow-300 hover:bg-yellow-300"
+          >
+            Falar com a engenharia Primuss
+          </Link>
         </div>
       </section>
     </div>
@@ -380,10 +304,10 @@ export default function SolucoesPage() {
 
 /* ========= COMPONENTES AUXILIARES ========= */
 
-function LedDot({ label }: { label: string }) {
+function StatusDot({ label }: { label: string }) {
   return (
-    <div className="flex items-center gap-1 rounded-full bg-slate-900/80 px-2 py-1 text-[9px] text-slate-300">
-      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+    <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/70 px-3 py-1 text-[11px] text-slate-200">
+      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
       <span>{label}</span>
     </div>
   );
@@ -391,11 +315,11 @@ function LedDot({ label }: { label: string }) {
 
 function MetricPill({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl bg-slate-900/80 px-3 py-2 ring-1 ring-slate-800/80">
-      <p className="text-[10px] uppercase tracking-[0.16em] text-slate-400">
+    <div className="rounded-2xl border border-slate-800 bg-slate-900/80 px-3 py-3">
+      <p className="text-[11px] uppercase tracking-[0.16em] text-slate-400">
         {label}
       </p>
-      <p className="mt-1 text-[11px] text-slate-100">{value}</p>
+      <p className="mt-1 text-[12px] text-slate-100">{value}</p>
     </div>
   );
 }
@@ -410,47 +334,35 @@ function SolutionCard({
   icon: "part" | "assembly" | "engineering";
 }) {
   return (
-    <div className="group flex flex-col rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-xl shadow-slate-950/60 transition hover:-translate-y-1 hover:border-sky-500/60 hover:shadow-sky-500/30">
-      <div className="flex items-center gap-2">
-        <div className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-slate-800 text-sky-400 group-hover:bg-sky-500/10 group-hover:text-sky-300">
-          {icon === "part" && <PartIcon />}
-          {icon === "assembly" && <AssemblyIcon />}
-          {icon === "engineering" && <EngineeringIcon />}
-        </div>
-        <h3 className="text-sm font-semibold text-slate-50">{title}</h3>
+    <article className="group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60 hover:bg-slate-900/80 hover:shadow-[0_0_40px_rgba(250,204,21,0.12)]">
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_0%_0%,rgba(250,204,21,0.16),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(248,250,252,0.12),transparent_55%)]" />
       </div>
-      <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
-        {bullets.map((b) => (
-          <li key={b} className="flex gap-2">
-            <span className="mt-1 h-1 w-1 rounded-full bg-sky-400" />
-            <span>{b}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+
+      <div className="relative space-y-3">
+        <div className="flex items-center gap-2">
+          <div className="inline-flex h-8 w-8 items-center justify-center rounded-2xl border border-slate-700/70 bg-slate-900/70 text-yellow-300 group-hover:border-yellow-400/80 group-hover:bg-yellow-400/10">
+            {icon === "part" && <PartIcon />}
+            {icon === "assembly" && <AssemblyIcon />}
+            {icon === "engineering" && <EngineeringIcon />}
+          </div>
+          <h3 className="text-sm font-semibold text-slate-50">{title}</h3>
+        </div>
+
+        <ul className="space-y-1.5 text-[13px] text-slate-200">
+          {bullets.map((b) => (
+            <li key={b} className="flex gap-2">
+              <span className="mt-1 h-1 w-1 rounded-full bg-yellow-300" />
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
   );
 }
 
-/* ========= ICONES ========= */
-
-function SparkIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-4 w-4"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-    >
-      <path
-        d="M12 2.5 13.4 8l4.6-1.4L14.5 11l3.5 3.4L13 13l-1 4.8-1-4.8-5 1.4L9 11 6 6.6 10.6 8 12 2.5Z"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+/* ========= ÍCONES ========= */
 
 function PartIcon() {
   return (
