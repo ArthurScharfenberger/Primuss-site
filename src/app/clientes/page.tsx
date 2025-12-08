@@ -82,7 +82,7 @@ const CLIENTES: Cliente[] = [
     id: "sulmaq",
     nome: "Sulmaq",
     logoSrc: "/sulmaq.avif",
-    url: "https://sulmaq.com", // ajuste se vocês usarem outro domínio
+    url: "https://sulmaq.com",
   },
   {
     id: "farina",
@@ -121,12 +121,6 @@ const CLIENTES: Cliente[] = [
     url: "https://www.fallgatter.com.br",
   },
   {
-    id: "laarmeria",
-    nome: "La Armeria",
-    logoSrc: "/laarmeria.avif",
-
-  },
-  {
     id: "beb",
     nome: "B&B Agroparts",
     logoSrc: "/beb.avif",
@@ -152,8 +146,13 @@ export default function ClientesPage() {
   return (
     <div className="bg-slate-950 text-slate-50">
       {/* HERO */}
-      <section className="border-b border-slate-900 bg-[radial-gradient(circle_at_top,_#020617,_#020617)]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 md:flex-row md:items-center">
+      <section className="relative overflow-hidden border-b border-slate-900 bg-[radial-gradient(circle_at_top,_#1e293b,_#020617)]">
+        {/* mesma luz fria das outras páginas */}
+        <div className="pointer-events-none absolute inset-0 opacity-40 mix-blend-screen">
+          <div className="h-full w-full bg-[radial-gradient(circle_at_10%_0%,rgba(250,250,250,0.12),transparent_55%),radial-gradient(circle_at_90%_0%,rgba(250,250,250,0.08),transparent_55%)]" />
+        </div>
+
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 md:flex-row md:items-center">
           {/* Texto à esquerda */}
           <div className="max-w-xl space-y-6">
             <p className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 bg-yellow-400/10 px-3 py-1 text-[11px] font-semibold tracking-[0.24em] text-yellow-300">
@@ -299,7 +298,6 @@ function LogoItem({ cliente }: { cliente: Cliente }) {
     </div>
   );
 
-  // Se tiver URL, vira link clicável abrindo em nova aba
   if (cliente.url) {
     return (
       <Link
@@ -314,7 +312,6 @@ function LogoItem({ cliente }: { cliente: Cliente }) {
     );
   }
 
-  // Se não tiver URL definida, só exibe a logo com o mesmo hover
   return (
     <div className="flex items-center justify-center" aria-label={cliente.nome}>
       {content}

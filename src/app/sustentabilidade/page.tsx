@@ -71,8 +71,9 @@ export default function SustentabilidadePage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-slate-800 bg-[radial-gradient(circle_at_top,_#1e293b,_#020617)]">
         <div className="pointer-events-none absolute inset-0 opacity-40 mix-blend-screen">
-          <div className="h-full w-full bg-[radial-gradient(circle_at_10%_0%,rgba(190,242,100,0.18),transparent_55%),radial-gradient(circle_at_90%_0%,rgba(52,211,153,0.12),transparent_55%)]" />
+          <div className="h-full w-full bg-[radial-gradient(circle_at_10%_0%,rgba(250,250,250,0.12),transparent_55%),radial-gradient(circle_at_90%_0%,rgba(250,250,250,0.08),transparent_55%)]" />
         </div>
+
 
         <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-16 lg:flex-row lg:items-center lg:py-24">
           <div className="flex-1 space-y-6">
@@ -293,9 +294,8 @@ function SummaryCard({
 }) {
   return (
     <div
-      className={`rounded-2xl border border-slate-800 bg-slate-900/80 p-4 ${
-        colSpan ? "sm:col-span-2" : ""
-      }`}
+      className={`rounded-2xl border border-slate-800 bg-slate-900/80 p-4 ${colSpan ? "sm:col-span-2" : ""
+        }`}
     >
       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-400">
         {titulo}

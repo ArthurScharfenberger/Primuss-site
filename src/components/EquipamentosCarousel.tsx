@@ -27,18 +27,18 @@ export function EquipamentosCarousel({ maquinas }: { maquinas: Maquina[] }) {
   };
 
   return (
-    <div>
+    <div className="mt-10 rounded-3xl border border-slate-800/60 bg-slate-950/70 px-4 py-10 sm:px-10 shadow-[0_0_80px_rgba(0,0,0,0.7)]">
       <div className="text-center">
-        <h2 className="text-lg sm:text-xl font-semibold italic text-slate-800">
+        <h2 className="text-base sm:text-lg font-semibold italic text-slate-50">
           Principais equipamentos disponíveis para manufatura
         </h2>
-        <div className="mt-2 h-[2px] w-64 mx-auto bg-slate-800" />
+        <div className="mt-3 h-[2px] w-40 sm:w-56 mx-auto bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500" />
       </div>
 
       <div className="mt-8 relative">
-        {/* fades laterais */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent" />
+        {/* fades laterais (agora escuros e bem suaves) */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-950 via-slate-950/70 to-transparent" />
 
         <div className="overflow-hidden">
           <div
@@ -50,21 +50,21 @@ export function EquipamentosCarousel({ maquinas }: { maquinas: Maquina[] }) {
                 key={i}
                 className="flex-[0_0_100%] px-4 flex items-center justify-center"
               >
-                <figure className="flex flex-col items-center text-center text-[11px] text-slate-700 max-w-sm mx-auto">
-                  <div className="relative h-28 w-full sm:h-32">
+                <figure className="flex flex-col items-center text-center max-w-sm mx-auto">
+                  <div className="relative h-36 w-full sm:h-40">
                     <Image
                       src={m.img}
                       alt={m.nome}
                       fill
-                      className="object-contain"
+                      className="object-contain drop-shadow-[0_12px_30px_rgba(0,0,0,0.6)]"
                       sizes="(min-width: 1024px) 320px, 90vw"
                     />
                   </div>
-                  <figcaption className="mt-3">
-                    <span className="block font-semibold text-slate-800">
+                  <figcaption className="mt-4">
+                    <span className="block text-sm font-semibold text-slate-50">
                       {m.nome}
                     </span>
-                    <span className="block text-[10px] text-slate-500 mt-1">
+                    <span className="block mt-1 text-[11px] text-slate-300">
                       {m.descricao}
                     </span>
                   </figcaption>
@@ -75,11 +75,11 @@ export function EquipamentosCarousel({ maquinas }: { maquinas: Maquina[] }) {
         </div>
 
         {/* controles */}
-        <div className="mt-5 flex items-center justify-center gap-4">
+        <div className="mt-6 flex items-center justify-center gap-4">
           <button
             type="button"
             onClick={() => goTo(index - 1)}
-            className="h-7 w-7 rounded-full border border-slate-300 bg-white shadow-sm text-slate-700 text-sm flex items-center justify-center hover:bg-slate-50"
+            className="h-8 w-8 rounded-full border border-slate-700 bg-slate-900/90 text-slate-100 text-sm flex items-center justify-center hover:bg-slate-800 transition-colors"
             aria-label="Anterior"
           >
             ‹
@@ -92,8 +92,8 @@ export function EquipamentosCarousel({ maquinas }: { maquinas: Maquina[] }) {
                 onClick={() => goTo(i)}
                 className={`h-1.5 rounded-full transition-all ${
                   i === index
-                    ? "w-6 bg-slate-800"
-                    : "w-2 bg-slate-300 hover:bg-slate-400"
+                    ? "w-6 bg-yellow-400"
+                    : "w-2 bg-slate-600 hover:bg-slate-400"
                 }`}
                 aria-label={`Ir para equipamento ${i + 1}`}
               />
@@ -102,7 +102,7 @@ export function EquipamentosCarousel({ maquinas }: { maquinas: Maquina[] }) {
           <button
             type="button"
             onClick={() => goTo(index + 1)}
-            className="h-7 w-7 rounded-full border border-slate-300 bg-white shadow-sm text-slate-700 text-sm flex items-center justify-center hover:bg-slate-50"
+            className="h-8 w-8 rounded-full border border-slate-700 bg-slate-900/90 text-slate-100 text-sm flex items-center justify-center hover:bg-slate-800 transition-colors"
             aria-label="Próximo"
           >
             ›
