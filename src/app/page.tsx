@@ -22,24 +22,24 @@ function HeroSection() {
   return (
     <section className="border-b border-slate-200 bg-slate-950 text-slate-50">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-20 lg:flex-row lg:items-center">
-        {/* LADO ESQUERDO – TEXTO */}
+
+        {/* LADO ESQUERDO */}
         <div className="flex-1 space-y-6">
           <p className="inline-flex items-center rounded-full bg-[#FFE500] px-3 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#111111] shadow">
-            USINAGEM · PRECISÃO · QUALIDADE
+            USINAGEM · ENGENHARIA · QUALIDADE
           </p>
 
           <div className="space-y-4">
             <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Usinagem de alta performance
+              Componentes usinados com precisão
               <span className="block text-slate-200">
-                para indústrias que não podem parar.
+                para aplicações industriais críticas.
               </span>
             </h1>
+
             <p className="max-w-xl text-sm text-slate-300 sm:text-base">
-              A Primuss atua na usinagem seriada e montagem de peças técnicas,
-              atendendo setores como automotivo, agronegócio, aeroespacial,
-              segurança e defesa, com estrutura própria e foco em qualidade
-              certificada e estabilidade de fornecimento.
+              Soluções de usinagem CNC e montagem de conjuntos para setores que exigem
+              confiabilidade, repetibilidade e controle dimensional.
             </p>
           </div>
 
@@ -66,12 +66,12 @@ function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-400" />
-              <span>Certificação ISO 9001:2015 e laboratório dimensional.</span>
+              <span>ISO 9001:2015 e laboratório dimensional.</span>
             </div>
           </div>
         </div>
 
-        {/* LADO DIREITO – CARD VISUAL */}
+        {/* LADO DIREITO */}
         <div className="flex-1">
           <div className="relative mx-auto max-w-md">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-2xl">
@@ -92,16 +92,17 @@ function HeroSection() {
               <div>
                 <p className="font-semibold">Parque fabril estruturado</p>
                 <p className="text-[11px] text-slate-400">
-                  Capacidade para usinagem seriada e montagem de conjuntos.
+                  Usinagem CNC e montagem seriada.
                 </p>
               </div>
             </div>
 
             <div className="pointer-events-none absolute -top-6 right-4 rounded-full bg-[#FFE500] px-3 py-2 text-[11px] font-semibold text-[#111111] shadow-xl">
-              Foco em qualidade e prazo de entrega
+              Foco em qualidade e entrega
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
@@ -113,13 +114,13 @@ function CertificationsStrip() {
   return (
     <section className="border-b border-slate-200 bg-white">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:grid-cols-[1.1fr,1fr,1fr] md:items-center">
+
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-500">
             Credibilidade & sustentabilidade
           </p>
           <p className="mt-2 max-w-xs text-xs text-slate-500">
-            Cadastros e certificações que reforçam a transparência financeira e
-            o compromisso da Primuss com o uso de energia de fontes renováveis.
+            Certificações que reforçam a solidez financeira e o compromisso da Primuss com energia renovável.
           </p>
         </div>
 
@@ -136,12 +137,8 @@ function CertificationsStrip() {
               height={80}
               className="transition-transform duration-200 group-hover:scale-105"
             />
-            <p className="text-[11px] font-semibold text-slate-700">
-              D-U-N-S® Registered
-            </p>
-            <p className="text-[11px] text-slate-500">
-              Empresa cadastrada na base global Dun &amp; Bradstreet.
-            </p>
+            <p className="text-[11px] font-semibold text-slate-700">D-U-N-S® Registered</p>
+            <p className="text-[11px] text-slate-500">Cadastro global Dun & Bradstreet.</p>
           </div>
         </Link>
 
@@ -153,19 +150,16 @@ function CertificationsStrip() {
           <div className="flex flex-col items-center gap-2 text-center">
             <Image
               src="/renovavel.avif"
-              alt="Empresa Renovável – Energia incentivada"
+              alt="Energia incentivada"
               width={140}
               height={80}
               className="transition-transform duration-200 group-hover:scale-105"
             />
-            <p className="text-[11px] font-semibold text-slate-700">
-              Empresa Renovável
-            </p>
-            <p className="text-[11px] text-slate-500">
-              Consumo de energia incentivada proveniente de fontes renováveis.
-            </p>
+            <p className="text-[11px] font-semibold text-slate-700">Empresa Renovável</p>
+            <p className="text-[11px] text-slate-500">Energia proveniente de fontes renováveis.</p>
           </div>
         </Link>
+
       </div>
     </section>
   );
@@ -177,44 +171,38 @@ function SolutionsSection() {
   const solutions = [
     {
       title: "Usinagem CNC seriada",
-      description:
-        "Processos estáveis para produção em alto volume, com foco em precisão dimensional, repetibilidade e produtividade.",
+      description: "Produção estável, alta repetibilidade e controle dimensional.",
       icon: <CncIcon />,
     },
     {
-      title: "Montagem de conjuntos e subconjuntos",
-      description:
-        "Montagem de componentes, aplicação de torque controlado, testes funcionais e rastreabilidade de lote.",
+      title: "Montagem técnica",
+      description: "Montagem com torque controlado, testes e rastreabilidade.",
       icon: <AssemblyIcon />,
     },
     {
-      title: "Desenvolvimento de processo",
-      description:
-        "Apoio técnico desde a análise do desenho até definição de rota, dispositivos, ferramentas e parâmetros de corte.",
+      title: "Engenharia de processo",
+      description: "Desenvolvimento de rota, dispositivos e parâmetros.",
       icon: <ProcessIcon />,
     },
   ];
 
   return (
-    <section
-      className="border-b border-slate-800 bg-slate-950 text-slate-50"
-      id="solucoes"
-    >
-      <div className="mx-auto max-w-6xl px-4 py-14">
+    <section className="border-b border-slate-800 bg-slate-950 text-slate-50" id="solucoes">
+      <div className="mx-auto max-w-6xl px-4 py-16">
+
         <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
-              Soluções em usinagem
+              Soluções industriais
             </h2>
             <div className="mt-2 h-0.5 w-10 rounded-full bg-[#FFE500]" />
             <p className="mt-2 text-lg font-medium text-slate-50">
-              Do desenvolvimento à produção seriada, em um único parceiro.
+              Usinagem CNC, montagem e engenharia.
             </p>
           </div>
+
           <p className="max-w-md text-xs text-slate-300">
-            Atuamos em toda a cadeia de usinagem seriada, combinando engenharia
-            de processo, usinagem CNC e montagem de conjuntos para aplicações
-            com requisitos técnicos exigentes.
+            Desde o desenvolvimento até a produção seriada, entregamos componentes com precisão, repetibilidade e confiabilidade.
           </p>
         </div>
 
@@ -233,23 +221,15 @@ function SolutionsSection() {
                     Solução Primuss
                   </span>
                 </div>
-                <h3 className="text-sm font-semibold text-slate-50">
-                  {solution.title}
-                </h3>
-                <p className="mt-2 text-xs text-slate-300">
-                  {solution.description}
-                </p>
+
+                <h3 className="text-sm font-semibold text-slate-50">{solution.title}</h3>
+                <p className="mt-2 text-xs text-slate-300">{solution.description}</p>
               </div>
+
               <div className="mt-4 flex flex-wrap gap-2 text-[11px] font-medium text-slate-400">
-                <span className="inline-flex items-center gap-1">
-                  <Dot /> Processo controlado
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <Dot /> Documentação técnica
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <Dot /> Foco em prazo
-                </span>
+                <span className="inline-flex items-center gap-1"><Dot /> Processo controlado</span>
+                <span className="inline-flex items-center gap-1"><Dot /> Documentação técnica</span>
+                <span className="inline-flex items-center gap-1"><Dot /> Foco em prazo</span>
               </div>
             </div>
           ))}
@@ -260,9 +240,10 @@ function SolutionsSection() {
             href="/solucoes"
             className="text-xs font-semibold text-slate-100 underline-offset-4 hover:underline"
           >
-            Ver detalhes das capacidades de usinagem →
+            Ver capacidades completas →
           </Link>
         </div>
+
       </div>
     </section>
   );
@@ -274,36 +255,30 @@ function SectorsSection() {
   const sectors = [
     {
       title: "Automotivo & motopeças",
-      description:
-        "Componentes com alta exigência em desempenho, segurança, rastreabilidade e atendimento a normas internacionais.",
+      description: "Peças com requisitos rigorosos de desempenho e rastreabilidade.",
       icon: <GearIcon />,
     },
     {
       title: "Agronegócio",
-      description:
-        "Peças para máquinas e implementos agrícolas, com foco em robustez, durabilidade e disponibilidade.",
+      description: "Componentes robustos para máquinas e implementos agrícolas.",
       icon: <TractorIcon />,
     },
     {
       title: "Aeroespacial",
-      description:
-        "Usinagem de peças com tolerâncias apertadas, materiais especiais e rigoroso controle dimensional.",
+      description: "Tolerâncias apertadas e materiais especiais.",
       icon: <AeroIcon />,
     },
     {
       title: "Segurança & defesa",
-      description:
-        "Componentes para aplicações táticas e de defesa, com confiabilidade e repetibilidade como premissas.",
+      description: "Confiabilidade em componentes para aplicações críticas.",
       icon: <DefenseIcon />,
     },
   ];
 
   return (
-    <section
-      className="border-b border-slate-200 bg-white"
-      id="setores-atendidos"
-    >
+    <section className="border-b border-slate-200 bg-white" id="setores-atendidos">
       <div className="mx-auto max-w-6xl px-4 py-14">
+
         <div className="mb-8 text-center">
           <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
             Setores atendidos
@@ -312,9 +287,8 @@ function SectorsSection() {
             Presença em diferentes segmentos da indústria.
           </p>
           <p className="mt-2 max-w-xl text-xs text-slate-500 mx-auto">
-            A experiência da Primuss permite atender mercados com requisitos
-            técnicos distintos, mantendo qualidade, confiabilidade e
-            competitividade no fornecimento de componentes.
+            A experiência da Primuss permite atender mercados com requisitos técnicos distintos,
+            mantendo qualidade, confiabilidade e competitividade.
           </p>
         </div>
 
@@ -328,12 +302,8 @@ function SectorsSection() {
                 {sector.icon}
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-slate-900">
-                  {sector.title}
-                </h3>
-                <p className="mt-2 text-xs text-slate-500">
-                  {sector.description}
-                </p>
+                <h3 className="text-sm font-semibold text-slate-900">{sector.title}</h3>
+                <p className="mt-2 text-xs text-slate-500">{sector.description}</p>
               </div>
             </div>
           ))}
@@ -344,9 +314,10 @@ function SectorsSection() {
             href="/setores-atendidos"
             className="text-xs font-semibold text-slate-700 underline-offset-4 hover:underline"
           >
-            Ver mais detalhes dos segmentos →
+            Ver todos os setores →
           </Link>
         </div>
+
       </div>
     </section>
   );
@@ -357,26 +328,23 @@ function SectorsSection() {
 function QualitySustainabilitySection() {
   return (
     <section className="border-b border-slate-200 bg-slate-950 text-slate-50">
-      <div className="mx-auto max-w-6xl px-4 py-14">
-        {/* CABEÇALHO CENTRALIZADO – RESUMO */}
+      <div className="mx-auto max-w-6xl px-4 py-16">
+
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
             Qualidade & sustentabilidade
           </h2>
           <p className="mt-3 text-2xl font-semibold text-slate-50">
-            Produção com controle, rastreabilidade e responsabilidade ambiental.
+            Qualidade, rastreabilidade e responsabilidade ambiental.
           </p>
           <p className="mt-3 text-xs text-slate-300 leading-relaxed">
-            Sistema de gestão da qualidade certificado ISO 9001:2015, apoio de
-            laboratório dimensional próprio e utilização de energia proveniente
-            de fontes renováveis compõem a base da operação industrial da
-            Primuss.
+            Controle dimensional, processos auditáveis e utilização de energia renovável
+            compõem a base das operações da Primuss.
           </p>
         </div>
 
-        {/* DOIS CARDS – VISÃO GERAL APENAS */}
         <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {/* QUALIDADE */}
+
           <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-[0_16px_40px_rgba(0,0,0,0.55)]">
             <div className="mb-3 flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-800 text-emerald-400">
@@ -386,30 +354,25 @@ function QualitySustainabilitySection() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
                   Gestão da qualidade
                 </p>
-                <p className="text-[11px] text-slate-400">
-                  ISO 9001:2015 · Laboratório dimensional
-                </p>
+                <p className="text-[11px] text-slate-400">ISO 9001:2015</p>
               </div>
             </div>
 
             <p className="text-sm font-medium text-slate-50">
-              Processos controlados e suporte metrológico em toda a cadeia de
-              produção.
+              Processos controlados e suporte metrológico em toda a produção.
             </p>
             <p className="mt-2 text-[11px] text-slate-400">
-              Estrutura preparada para garantir conformidade com requisitos de
-              desenho, rastreabilidade e repetibilidade em usinagem seriada.
+              Garantia de conformidade, repetibilidade e documentação completa.
             </p>
 
             <Link
               href="/qualidade"
               className="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold text-[#FFE500] underline-offset-4 hover:underline"
             >
-              Ver detalhes do sistema de qualidade →
+              Ver detalhes →
             </Link>
           </div>
 
-          {/* SUSTENTABILIDADE */}
           <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-[0_16px_40px_rgba(0,0,0,0.45)]">
             <div className="mb-3 flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-800 text-sky-400">
@@ -419,30 +382,27 @@ function QualitySustainabilitySection() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">
                   Responsabilidade ambiental
                 </p>
-                <p className="text-[11px] text-slate-400">
-                  Energia incentivada & redução de CO₂
-                </p>
+                <p className="text-[11px] text-slate-400">Energia renovável</p>
               </div>
             </div>
 
             <p className="text-sm font-medium text-slate-50">
-              Compromisso com o uso eficiente de recursos e matriz energética
-              mais limpa.
+              Compromisso com o uso eficiente de recursos e matriz energética limpa.
             </p>
             <p className="mt-2 text-[11px] text-slate-400">
-              Parte da energia consumida é proveniente de fontes renováveis, com
-              iniciativas contínuas de otimização de consumo e gestão de
-              resíduos.
+              Energia incentivada, redução de emissões e gestão de resíduos.
             </p>
 
             <Link
               href="/sustentabilidade"
               className="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold text-slate-100 underline-offset-4 hover:underline"
             >
-              Ver panorama sustentável →
+              Ver mais →
             </Link>
           </div>
+
         </div>
+
       </div>
     </section>
   );
@@ -454,6 +414,7 @@ function ClientsTeaser() {
   return (
     <section className="border-b border-slate-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-20">
+
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
             Clientes & Parcerias
@@ -462,19 +423,18 @@ function ClientsTeaser() {
             Confiança construída ao longo do tempo.
           </p>
           <p className="mt-3 text-xs text-slate-500 leading-relaxed">
-            A Primuss atende empresas de referência em seus setores, com
-            relacionamento técnico próximo, estabilidade de fornecimento e
-            excelência na entrega de componentes críticos.
+            Empresas líderes confiam na Primuss para componentes críticos,
+            com estabilidade, engenharia aplicada e precisão.
           </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
           {[
             "Empresas líderes em seus segmentos industriais.",
-            "Projetos críticos com tolerâncias e requisitos rigorosos.",
-            "Parcerias de longo prazo com foco em qualidade e prazo.",
+            "Projetos com requisitos rigorosos de tolerância.",
+            "Parcerias de longo prazo com foco em prazo.",
             "Atendimento técnico próximo e engenharia colaborativa.",
-            "Processos auditáveis e documentação completa de produto.",
+            "Processos auditáveis e documentação completa.",
             "Capacidade produtiva estável para demandas seriadas.",
           ].map((item, index) => (
             <div
@@ -492,9 +452,10 @@ function ClientsTeaser() {
             href="/clientes"
             className="text-xs font-semibold text-slate-700 underline-offset-4 hover:underline"
           >
-            Ver lista de clientes e cases →
+            Ver lista de clientes →
           </Link>
         </div>
+
       </div>
     </section>
   );
@@ -508,6 +469,7 @@ function FinalCta() {
       <div className="mx-auto max-w-6xl px-4 py-10">
         <div className="rounded-3xl border border-slate-700 bg-gradient-to-r from-slate-900 to-slate-800 px-6 py-8 sm:px-10 sm:py-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
                 Próximo passo
@@ -516,9 +478,8 @@ function FinalCta() {
                 Vamos falar sobre o seu projeto?
               </p>
               <p className="mt-2 max-w-md text-xs text-slate-300">
-                Envie seu desenho, especificação ou demanda de produção e nosso
-                time técnico irá avaliar a melhor solução em usinagem seriada ou
-                montagem de conjuntos para a sua aplicação.
+                Envie seu desenho ou especificação e nosso time técnico fará a análise
+                para apresentar a melhor solução de usinagem ou montagem.
               </p>
             </div>
 
@@ -530,10 +491,10 @@ function FinalCta() {
                 Falar com o time comercial
               </Link>
               <span className="text-[11px] text-slate-400">
-                Resposta em horário comercial · Atendimento técnico
-                especializado
+                Resposta em horário comercial · Atendimento técnico especializado
               </span>
             </div>
+
           </div>
         </div>
       </div>
@@ -541,79 +502,20 @@ function FinalCta() {
   );
 }
 
-/* ===================== ÍCONES SVG ===================== */
+/* ===================== ÍCONES ===================== */
 
 function FactoryIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <path d="M3 21V9l5 3V9l5 3V5l3-2v18H3Z" />
       <path d="M7 17h2M11 17h2M7 13h2" />
     </svg>
   );
 }
 
-function BuildingIcon() {
-  return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
-      <rect x="5" y="3" width="10" height="18" rx="1" />
-      <path d="M15 7h4v14H9" />
-      <path d="M9 7h2M9 11h2M9 15h2" />
-    </svg>
-  );
-}
-
-function TargetIcon() {
-  return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
-      <circle cx="12" cy="12" r="7" />
-      <circle cx="12" cy="12" r="3" />
-      <path d="M12 5V3M19 12h2M12 21v-2M3 12h2" />
-    </svg>
-  );
-}
-
-function ShieldIcon() {
-  return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
-      <path d="M12 3 5 6v6c0 3.5 2.4 6.7 7 9 4.6-2.3 7-5.5 7-9V6l-7-3Z" />
-      <path d="M9 12.5 11 14l4-4" />
-    </svg>
-  );
-}
-
 function CncIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <rect x="4" y="4" width="16" height="8" rx="1" />
       <path d="M8 4v8M16 4v8M5 16h14M9 16v4M15 16v4" />
     </svg>
@@ -622,13 +524,7 @@ function CncIcon() {
 
 function AssemblyIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <circle cx="8" cy="8" r="3" />
       <circle cx="16" cy="16" r="3" />
       <path d="M10.5 10.5 13.5 13.5" />
@@ -639,13 +535,7 @@ function AssemblyIcon() {
 
 function ProcessIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <rect x="4" y="4" width="6" height="6" rx="1" />
       <rect x="14" y="4" width="6" height="6" rx="1" />
       <rect x="4" y="14" width="6" height="6" rx="1" />
@@ -656,13 +546,7 @@ function ProcessIcon() {
 
 function GearIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <circle cx="12" cy="12" r="3" />
       <path d="M4 12h2M18 12h2M12 4v2M12 18v2" />
       <path d="m7 7 1.5 1.5M15.5 15.5 17 17M7 17l1.5-1.5M15.5 8.5 17 7" />
@@ -672,13 +556,7 @@ function GearIcon() {
 
 function TractorIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <circle cx="7" cy="17" r="3" />
       <circle cx="17" cy="17" r="2.5" />
       <path d="M3 17h1M10 17h4M5 17v-5h6l1-4h4l1 4h1.5" />
@@ -689,13 +567,7 @@ function TractorIcon() {
 
 function AeroIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <path d="M3 11.5 21 4l-7.5 18-2.5-7.5L3 11.5Z" />
       <path d="M12 14 9 11" />
     </svg>
@@ -704,13 +576,7 @@ function AeroIcon() {
 
 function DefenseIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <path d="M12 3 5 6v6.5c0 3.2 2.2 6.1 7 8.5 4.8-2.4 7-5.3 7-8.5V6l-7-3Z" />
       <path d="M9 10h6M9 13h4" />
     </svg>
@@ -719,13 +585,7 @@ function DefenseIcon() {
 
 function LabIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <path d="M9 3v5l-4 8a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-4-8V3" />
       <path d="M9 8h6" />
     </svg>
@@ -734,13 +594,7 @@ function LabIcon() {
 
 function LeafIcon() {
   return (
-    <svg
-      className="h-5 w-5"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
       <path d="M4 20c8 0 14-6 14-14" />
       <path d="M4 20c0-8 6-14 14-14" />
       <path d="M9 15c1-3 3-5 7-7" />
@@ -749,7 +603,5 @@ function LeafIcon() {
 }
 
 function Dot() {
-  return (
-    <span className="inline-block h-1.5 w-1.5 rounded-full bg-current" />
-  );
+  return <span className="inline-block h-1.5 w-1.5 rounded-full bg-current" />;
 }
