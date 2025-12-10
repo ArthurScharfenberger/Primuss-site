@@ -200,29 +200,29 @@ export default function SolucoesPage() {
         </div>
       </section>
 
-      {/* CARROSSEL – bloco escuro no padrão da Home (tipo Qualidade) */}
-      <section className="border-b border-slate-800 bg-slate-950 text-slate-50">
+      {/* CARROSSEL – AGORA EM FUNDO CLARO, NO PADRÃO DA HOME */}
+      <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
                 Parque de máquinas
               </h2>
-              <p className="mt-2 text-lg font-medium text-slate-50">
+              <p className="mt-2 text-lg font-medium text-slate-900">
                 Parque de máquinas &amp; capacidade instalada
               </p>
-              <p className="mt-2 max-w-2xl text-xs text-slate-300">
+              <p className="mt-2 max-w-2xl text-xs text-slate-600">
                 Centros de usinagem, tornos CNC, células dedicadas e recursos de
                 ferramentaria que suportam programas contínuos de fornecimento.
               </p>
             </div>
-            <p className="max-w-sm text-[11px] text-slate-400">
-              Abaixo, alguns dos principais equipamentos disponíveis para produção
-              seriada. Imagens ilustrativas do parque instalado.
+            <p className="max-w-sm text-[11px] text-slate-500">
+              Abaixo, alguns dos principais equipamentos disponíveis para
+              produção seriada. Imagens ilustrativas do parque instalado.
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.6)]">
+          <div className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/80 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.6)]">
             <EquipamentosCarousel maquinas={MAQUINAS} />
           </div>
         </div>
@@ -292,9 +292,10 @@ export default function SolucoesPage() {
                   Tem um componente ou célula em mente?
                 </p>
                 <p className="mt-2 max-w-md text-xs text-slate-300">
-                  Envie o desenho técnico, volume estimado, materiais e requisitos
-                  principais. Nossa equipe avalia a viabilidade, estrutura a rota
-                  de processo e sugere o melhor modelo de fornecimento.
+                  Envie o desenho técnico, volume estimado, materiais e
+                  requisitos principais. Nossa equipe avalia a viabilidade,
+                  estrutura a rota de processo e sugere o melhor modelo de
+                  fornecimento.
                 </p>
               </div>
 
