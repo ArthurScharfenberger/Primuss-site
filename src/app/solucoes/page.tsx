@@ -222,7 +222,7 @@ export default function SolucoesPage() {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/80 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.6)]">
+          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-transparent p-0">
             <EquipamentosCarousel maquinas={MAQUINAS} />
           </div>
         </div>
