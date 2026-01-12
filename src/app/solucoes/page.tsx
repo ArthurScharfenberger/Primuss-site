@@ -1,7 +1,6 @@
 // src/app/solucoes/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { EquipamentosCarousel } from "@/components/EquipamentosCarousel";
 
 export const metadata: Metadata = {

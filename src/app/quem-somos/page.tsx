@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 
 import img1989 from "../../../public/1989.png";
 import img1994 from "../../../public/1994.png";
@@ -20,7 +21,7 @@ type HistoryItem = {
   area: string;
   people: string;
   description: string;
-  image: any;
+  image: StaticImageData;
 };
 
 /* ========= DADOS ========= */

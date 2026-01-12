@@ -19,6 +19,7 @@ export function CertificationsStrip() {
         <Link
           href="/duns.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           className="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300"
         >
           <div className="flex flex-col items-center gap-2 text-center">
@@ -41,6 +42,7 @@ export function CertificationsStrip() {
         <Link
           href="/energia.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           className="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300"
         >
           <div className="flex flex-col items-center gap-2 text-center">
